@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Prediction Survey</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 30px auto;
+            background: #e6f7ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 2px solid #87ceeb;
+        }
+        h1 {
+            text-align: center;
+            color: #4682b4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #4b0082;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #87cefa;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #32cd32;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #228b22;
+        }
+        .yes-no {
+            display: flex;
+            gap: 10px;
+        }
+        .yes-no input {
+            width: auto;
+        }
+        .yes-no label {
+            color: #8b0000;
+        }
+        h3 {
+            color: #2e8b57;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Autism Prediction Survey</h1>
+        <form id="autismSurvey">
+            <div class="form-group">
+                <label for="age">Age of the patient in years</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender of the patient</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ethnicity">Ethnicity of the patient</label>
+                <select id="ethnicity" name="ethnicity" required>
+                    <option value="">Select</option>
+                    <option value="White-European">White-European</option>
+                    <option value="?">Unknown</option>
+                    <option value="Middle Eastern">Middle Eastern</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Black">Black</option>
+                    <option value="South Asian">South Asian</option>
+                    <option value="Pasifika">Pasifika</option>
+                    <option value="Scandinavian">Scandinavian</option>
+                    <option value="Latino">Latino</option>
+                    <option value="Hispanic">Hispanic</option>
+                    <option value="Turkish">Turkish</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Did the patient had jaundice at the time of birth</label>
+                <div class="yes-no">
+                    <label><input type="radio" name="jaundice" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="jaundice" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Does an immediate family member have been diagnosed with autism</label>
+                <div class="yes-no">
+                    <label><input type="radio" name="austim" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="austim" value="No"> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contry_of_res">Country of residence of the patient</label>
+                <input type="text" id="contry_of_res" name="contry_of_res" required>
+            </div>
+
+            <div class="form-group">
+                <label>Did the patient has undergone a screening test before</label>
+                <div class="yes-no">
+                    <label><input type="radio" name="used_app_before" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="used_app_before" value="No"> No</label>
+                </div>
+            </div>
+
+            <h3>The following are the question essential for Daignosis, so answer correctly.</h3>
+            <div id="score-questions">
+                <div class="form-group">
+                    <label>Does the patient lives somewhat in a world of his/her own
+                        with restricted idiosyncratic intellectual
+                        interests
+                        </label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A1_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A1_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient accumulates facts on certain subjects
+                        (good rote memory) but does not really
+                        understand the meaning</label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient has a different voice or speech
+                    </label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient expresses sounds involuntarily; clears
+                        throat, grunts, smacks, cries or screams</label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient lacks empathy </label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient has a deviant style of gaze </label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient wishes to be sociable but fails to
+                        make relationships with peers</label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient can be with other children but only
+                        on his/her terms </label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient lacks common sense</label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does the patient has involuntary face or body
+                        movements</label>
+                    <div class="yes-no">
+                        <label><input type="radio" name="A2_Score" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="A2_Score" value="No"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="relation">Relation of patient who completed the test</label>
+                    <select id="relation" name="relation" required>
+                        <option value="">Select</option>
+                        <option value="Self">Self</option>
+                        <option value="?">Gaurdian</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Relative">Relative</option>
+                        <option value="Others">Others</option>
+                        <option value="Health care professional">Health care professional</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Other Questions -->
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('autismSurvey').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            const formData = new FormData(this);
+            const surveyData = {};
+            formData.forEach((value, key) => {
+                surveyData[key] = value;
+            });
+
+            console.log('Survey Submitted:', surveyData);
+            alert('Thank you for completing the survey!');
+        });
+    </script>
+</body>
+</html>
