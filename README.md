@@ -58,10 +58,9 @@ The system trains three different machine learning models:
 pip install numpy pandas matplotlib seaborn scikit-learn xgboost imbalanced-learn
 ```
 
-### 2. Run the Project
-Ensure that `train.csv` is in the project directory and run:
-```bash
-python3 autism.py
+### 2. Check Backend.ipynb
+Jupyter Notebook that has all backend integrations and code, showcasing comparisions of SVC, XGBOOST and LOGISTIC REGRESSION.
+
 ```
 
 ## Expected Outcome
